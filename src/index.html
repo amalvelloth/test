@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progbiz Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link href="../dist/output.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Include Alpine.js for toggling -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+    <nav class="bg-white text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <span class="flex flex-col">
+                <a href="#" class="text-4xl font-bold text-[#479ACE]">COOL</a>
+                <a href="#" class="text-sm text-black font-medium leading-1.5">TECHNOLOGIES</a>
+            </span>
+
+            <!-- Mobile Menu Button (Hidden on large screens) -->
+            <button @click="open = !open" class="md:hidden text-black text-3xl">
+                ☰
+            </button>
+
+            <!-- Navigation Links (Hidden on mobile, visible on larger screens) -->
+            <ul class="hidden md:flex items-center space-x-6">
+                <li><a href="#" class="text-lg !text-black font-[500]">HOME</a></li>
+                <li><a href="#" class="text-lg !text-black font-[500]">ABOUT</a></li>
+                <li><a href="#" class="text-lg !text-black font-[500]">SERVICE</a></li>
+                <li><a href="#" class="text-lg !text-black font-[500]">PRODUCTS</a></li>
+                <li><a href="#" class="text-lg !text-black font-[500]">BLOG</a></li>
+                <li><a href="#" class="text-lg !text-black font-[500]">CONTACT</a></li>
+                <button class="bg-white text-black font-[500] border border-black px-6 py-2 rounded-full">LET'S
+                    TALK</button>
+            </ul>
+        </div>
+
+        <!-- Mobile Dropdown Menu (Hidden by default) -->
+        <div x-data="{ open: false }" x-show="open"
+            class="md:hidden bg-white text-black absolute w-full left-0 top-16 shadow-lg">
+            <ul class="flex flex-col space-y-4 p-6">
+                <li><a href="#" class="text-lg font-[500]">HOME</a></li>
+                <li><a href="#" class="text-lg font-[500]">ABOUT</a></li>
+                <li><a href="#" class="text-lg font-[500]">SERVICE</a></li>
+                <li><a href="#" class="text-lg font-[500]">PRODUCTS</a></li>
+                <li><a href="#" class="text-lg font-[500]">BLOG</a></li>
+                <li><a href="#" class="text-lg font-[500]">CONTACT</a></li>
+                <button class="bg-white text-black font-[500] border border-black px-6 py-2 rounded-full">LET'S
+                    TALK</button>
+            </ul>
+        </div>
+    </nav>
+
+
+    <section class="relative h-screen">
+        <div class="absolute inset-0 bg-[#F9F9F9] bg-opacity-50 px-10 flex flex-col justify-center">
+            <div class="text-start text-white pt-20 pb-12 w-full md:w-3/4">
+                <h1 class="text-5xl font-bold text-[#0B1826] mb-5">Your Trusted Partner In Cooling Solutions</h1>
+                <p class="text-2xl text-[#545471] mb-9">Lorem ipsum is simply text of the printing and typesetting
+                    industry. Lorem ipsum is simply text of the printing and typesetting industry.</p>
+                <div class="flex">
+                    <button class="bg-[#479ACE] hover:bg-blue-700 text-white py-3 px-6 me-2 rounded-full">LETS TALK</button>
+                    <button class="text-[#221F1D] border border-[#221F1D] py-3 px-6 rounded-full">EXPLORE OUR PRODUCTS</button>
+                </div>
+            </div>
+            <div class="w-full flex justify-center mt-6 md:mt-0">
+                <img class="rounded-2xl max-sm:w-full max-sm:h-auto h-auto max-h-[400px] w-auto max-w-[500px] object-cover"
+                    src="/assets/realistic-split-ac-mockup-with-cold-warm-air-flow-control-home-office.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="py-12 bg-[#F9F9F9]">
+        <div class="container flex mx-auto text-center px-10">
+            <div class="text-start w-1/2">
+                <h1 class="text-sm text-[#479ACE]">ABOUT</h1>
+                <h2 class="text-4xl font-medium mb-6">Cool Technologies</h2>
+            </div>
+            <div class="text-start w-3/4">
+                <p class="text-lg mb-10">Founded in the Emirate of Abu Dhabi in 2012, Cool Technologies have emerged to
+                    be one of the leading suppliers of industrial cooling equipent in the UAE for the past 10 years.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-[#F9F9F9]">
+        <div class="container  mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6">Our Services</h2>
+            <p class="text-lg mb-10">A concise description of your services.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="path/to/service1.jpg" alt="Service 1" class="mb-9">
+                    <h3 class="text-2xl font-bold mb-2">Service 1</h3>
+                    <p>Detailed description of service 1.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-gray-200">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6">Why Choose Us</h2>
+            <p class="text-lg mb-10">Reasons to pick your company.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <i class="fas fa-check-circle text-4xl text-green-500 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2">Quality</h3>
+                    <p>Description of your quality standards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-blue-500 text-white text-center">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold mb-6">Ready to Get Started?</h2>
+            <button class="bg-white text-blue-500 font-bold py-3 px-6 rounded">Contact Us</button>
+        </div>
+    </section>
+
+    <footer class="py-6 bg-gray-800 text-white text-center">
+        <div class="container mx-auto">
+            <p>&copy; 2023 Your Company. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
