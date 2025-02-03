@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Progbiz Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <title>Progbiz Project</title>
     <link href="../dist/output.css" rel="stylesheet" />
+    <link href="../src/input.css" rel="stylesheet" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
 
@@ -15,12 +15,12 @@
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
     <!-- Navbar -->
-    <nav class="bg-white text-white p-4 px-8 relative">
+    <header
+        class="fixed top-0 left-0 w-full py-4 px-8 text-center bg-white z-[9999] transition-all duration-300 ease-in-out">
         <div class="container mx-auto flex justify-between items-center">
             <!-- Logo -->
             <span class="flex flex-col">
-                <a href="#" class="text-4xl font-bold text-[#479ACE]">COOL</a>
-                <a href="#" class="text-sm text-black font-medium leading-1.5">TECHNOLOGIES</a>
+                <img src="../assets/images/logo-cool-technologies.png" class="w-32" alt="">
             </span>
 
             <!-- Mobile Menu Button (Hidden on large screens) -->
@@ -65,13 +65,13 @@
                 </button>
             </ul>
         </div>
-    </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen">
+    <section class="relative min-h-screen w-full pt-14">
         <div class=" inset-0 bg-[#F9F9F9] bg-opacity-50 px-14 flex flex-col items-start">
             <!-- Text Content -->
-            <div class="text-start text-white pt-10 md:pt-20 pb-8 md:pb-12 w-1/2 max-w-4xl">
+            <div class="text-start text-white pt-10 md:pt-20 pb-8 w-full md:pb-12 md:w-1/2 max-w-4xl">
                 <h1 class="w-11/12 text-[64px] font-bold text-[#0B1826] leading-20 mb-5">
                     Your Trusted Partner In Cooling Solution
                 </h1>
@@ -117,31 +117,31 @@
                         emerged to be one of the leading suppliers of industrial cooling
                         equipment in the UAE for the past 10 years.
                     </p>
-                    <div class="flex items-center justify-end text-[#0B1826] pr-10 relative cursor-pointer group">
-                        <!-- Arrow positioned above the circle -->
-
-
-                        <!-- Circle behind the arrow -->
-                        <span
-                            class="w-[55px] h-[55px] mr-4 text-[#0B1826] border border-[#0B1826] rounded-full inline-block relative z-0">
-                            <img src="../assets/black-lengthy-right-arrow.svg"
-                                class="absolute right-5 transition-transform w-20 duration-300 group-hover:translate-x-10 z-10"
-                                alt="">
-                        </span>
-
-                        KNOW MORE
-                    </div>
-
+                    <a href="second-page.html" class="block">
+                        <div
+                            class="flex items-center justify-end text-[#0B1826] h-auto pr-10 relative cursor-pointer group">
+                            <span
+                                class="w-[55px] h-[55px] mr-4 text-[#0B1826] border border-[#0B1826] rounded-full inline-block relative z-0">
+                                <img src="../assets/black-lengthy-right-arrow.svg"
+                                    class="absolute right-5 transition-transform w-20 duration-300 group-hover:translate-x-10 z-10"
+                                    alt="">
+                            </span>
+                            KNOW MORE
+                        </div>
+                    </a>
                 </div>
+
             </div>
         </div>
         <div class="flex overflow-hidden mx-auto text-center gap-8">
             <img src="../assets/images/hvac-unit-outdoor.jpg"
-                class="w-full max-w-[500px] h-auto object-cover rounded-[10px]" alt="">
+                class="w-[392px] h-[500px] object-cover rounded-[10px]" alt="">
             <img src="../assets/images/person-cleaning-air-conditioner-filter.jpg"
-                class="w-full max-w-[500px] h-auto object-cover rounded-[10px]" alt="">
+                class="w-[392px] h-[460px] object-cover rounded-[10px]" alt="">
             <img src="../assets/images/technician-maintaining-ac-unit.jpg"
-                class="w-full max-w-[500px] h-auto object-cover rounded-[10px]" alt="">
+                class="w-[392px] h-[400px] object-cover rounded-[10px]" alt="">
+            <img src="../assets/images/technician-cleaning-air-conditioner-filter.jpg"
+                class="w-[392px] h-auto object-cover rounded-[10px]" alt="">
         </div>
     </section>
 
@@ -334,13 +334,19 @@
                         </div>
                     </div>
                     <div class="p-1 rounded-lg">
-                        <img src="../assets/images/commercial-ice-maker-machine.png" alt="Ice Makers"
-                            class="w-full h-[470px] object-cover rounded-[10px]">
+                        <div class="relative w-full h-[470px]">
+                            <img src="../assets/images/white-background.jpg" alt="white-background"
+                                class="w-full h-full object-cover rounded-[10px]">
+                            <img src="../assets/images/commercial-ice-maker-machine.png" alt="Ice Makers"
+                                class="absolute top-0 left-1/2 transform -translate-x-72 h-full">
+                        </div>
                         <div class="flex items-center justify-start mt-10">
                             <p class="text-center text-2xl">Ice Makers</p>
                             <img src="../assets/black-up-right-arrow.svg" width="20px" alt="" />
                         </div>
                     </div>
+
+
                 </div>
 
                 <!-- Right Column -->
@@ -362,13 +368,18 @@
                         </div>
                     </div>
                     <div class="p-1 rounded-lg">
-                        <img src="../assets/images/cooltech-stainless-steel-water-coolers.png" alt="Water Coolers"
-                            class="w-full h-[590px] object-cover rounded-[10px]">
+                        <div class="relative w-full h-[590px] object-cover">
+                            <img src="../assets/images/white-background.jpg" alt="white-background"
+                                class="w-full h-full object-cover rounded-[10px]">
+                            <img src="../assets/images/cooltech-stainless-steel-water-coolers.png" alt="Water Coolers"
+                                class="absolute w-[550px] top-20 left-1/2 transform -translate-x-1/2 h-auto">
+                        </div>
                         <div class="flex items-center justify-start mt-10">
                             <p class="text-center text-2xl">Water Coolers</p>
                             <img src="../assets/black-up-right-arrow.svg" width="20px" alt="" />
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -399,7 +410,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex justify-between overflow-hidden"> <!--Timeline-->
+            <div class="flex justify-between pb-24 overflow-hidden"> <!--Timeline-->
                 <!-- Card 1 -->
                 <div class="w-[438px] p-10 bg-[#046FE20D]">
 
@@ -472,7 +483,10 @@
                     </div>
                 </div>
             </div>
-
+            <div class="flex w-full h-1/2">
+                <video class="w-full h-[480px] rounded-[10px] object-cover object-center"
+                    src="../assets/video/sample-video.mp4" autoplay loop></video>
+            </div>
         </div>
     </section>
 
@@ -486,7 +500,7 @@
                         with lovely clients</h2>
                 </div>
             </div>
-           
+
             <div class="grid grid-cols-2 md:grid-cols-4 pt-16">
                 <div class="w-full h-20 p-4 flex justify-center items-center border-r border-b border-gray-300">
                     <img src="../assets/images/logo-o-general.png" alt="Logo 1" class="max-w-[80%] max-h-[80%]">
@@ -506,38 +520,299 @@
                 <div class="w-full h-20 p-4 flex justify-center items-center md:border-r border-gray-300">
                     <img src="../assets/images/logo-super-general.png" alt="Logo 6" class="max-w-[180%] max-h-[180%]">
                 </div>
-                <div class="w-full h-20 p-4 flex justify-center items-center border-t md:border-t-0 border-r border-gray-300">
+                <div
+                    class="w-full h-20 p-4 flex justify-center items-center border-t md:border-t-0 border-r border-gray-300">
                     <img src="../assets/images/logo-siemens.png" alt="Logo 7" class="max-w-[80%] max-h-[80%]">
                 </div>
                 <div class="w-full h-20 p-4 flex justify-center items-center border-t md:border-t-0 border-gray-300">
                     <img src="../assets/images/logo-whirlpool.png" alt="Logo 8" class="max-w-[80%] max-h-[80%]">
                 </div>
             </div>
-            
-            
+
+
 
             <div class="flex items-center justify-start px-10 text-[#0B1826] relative cursor-pointer group">
-                <span class="w-[20px] h-[20px] mr-4 border border-[#d7d7d7] rounded-full inline-block relative z-0"></span>
-            
+                <span
+                    class="w-[20px] h-[20px] mr-4 border border-[#d7d7d7] rounded-full inline-block relative z-0"></span>
+
                 <img src="../assets/black-lengthy-right-arrow.svg"
                     class="w-[60px] h-auto mr-6 relative -ml-20 transition-transform duration-300 group-hover:translate-x-6 z-10"
                     alt="">
-            
+
                 KNOW MORE
             </div>
-            
+
 
         </div>
     </section>
 
 
+    <section class="py-12 bg-[#F3F3F3]">
+        <div class="flex h-[700px] w-full bg-cover bg-top relative"
+            style="background-image: url('../assets/images/person-using-remote-control-for-ac.jpg');">
+            <div class="absolute inset-0 bg-[#0B1826A8] opacity-100"></div>
+            <div class="flex w-full h-full">
+                <!-- Left Side Content -->
+                <div class="w-1/2 flex flex-col px-14 justify-center z-10">
+                    <div class="content">
+                        <h6 class="text-white text-[12px]">GET IN TOUCH NOW</h6>
+                        <h2 class="text-white text-6xl font-bold leading-18">Ready to Upgrade Your Cooling?</h2>
+                        <p class="text-white">Tellus rutrum tellus pellentesque eu. Sagittis purus sit
+                            amet volutpat. Sed ullamcorper tellus rutrum tellus
+                            pellentesque eu. Sagittis purus sit</p>
+                        <button
+                            class="flex items-center justify-center text-white text-[12px] mt-8 px-8 py-2.5 rounded-full bg-[#15212D] border border-[#8787871a] w-auto">
+                            VIEW MORE
+                            <img src="../assets/white-lengthy-right-arrow.svg" class="w-10 ml-2" alt="">
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Side Content -->
+                <div class="w-1/2 px-14">
+                    <div class="bg-white mt-24 py-16 px-10 rounded-lg w-full relative z-20">
+                        <div class="absolute inset-x-0 -bottom-4 bg-[#0B1826] h-4 rounded-b-lg -z-10"></div>
+
+                        <div class="flex items-center justify-start mb-10">
+                            <img src="../assets/contact-form.svg" class="w-8 mr-1" alt="">
+                            <h2 class="text-2xl text-start">Let's Connect</h2>
+                        </div>
+                        <form>
+                            <div class="flex gap-6">
+                                <div class="mb-5">
+                                    <input type="text" id="name" name="name" placeholder="Enter Name"
+                                        class="w-full p-6 bg-[#BDC4CB36] rounded-[10px] focus:outline-none focus:ring-2 focus:ring-[#9CA3AF]"
+                                        required>
+                                </div>
+                                <div class="mb-5">
+                                    <input type="email" id="email" name="email" placeholder="Enter Email"
+                                        class="w-full p-6 bg-[#BDC4CB36] rounded-[10px] focus:outline-none focus:ring-2 focus:ring-[#9CA3AF]"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="mb-5">
+                                <input type="text" id="phone" name="phone" placeholder="Enter your Phone Number"
+                                    class="w-full p-6 bg-[#BDC4CB36] rounded-[10px] focus:outline-none focus:ring-2 focus:ring-[#9CA3AF]"
+                                    required>
+                            </div>
+                            <div class="flex items-center justify-between text-[19px] mb-4">
+                                <label class="flex items-center space-x-3">
+                                    <input type="checkbox" name="option3" value="yes"
+                                        class="w-6 h-6 border-8 border-gray-500 rounded-full ">
+                                    <span>Purchase</span>
+                                </label>
+                                <label class="flex items-center space-x-3">
+                                    <input type="checkbox" name="option3" value="yes"
+                                        class="w-6 h-6 border-8 border-gray-500 rounded-full ">
+                                    <span>Installation</span>
+                                </label>
+                                <label class="flex items-center space-x-3">
+                                    <input type="checkbox" name="option3" value="yes"
+                                        class="w-6 h-6 border-8 border-gray-500 rounded-full ">
+                                    <span>Services</span>
+                                </label>
+                            </div>
+                            <div class="mb-5">
+                                <textarea id="message" name="message" placeholder="Enquiry" rows="4" class="w-full h-32 p-6 pt-12 bg-[#BDC4CB36] rounded-[10px] focus:outline-none focus:ring-2 focus:ring-[#9CA3AF] 
+           text-start placeholder-gray-500 leading-none">
+</textarea>
+
+                            </div>
+                            <div class="flex">
+                                <button type="submit"
+                                    class=" bg-white hover:bg-[#0B1826] text-[#0B1826] hover:text-white border border-[#0B1826] px-8 py-4 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500">Send
+                                    Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-[#F3F3F3]">
+        <div class="mx-auto px-14">
+            <h1 class="text-xl text-[#397DA8] mb-4">O U R &nbsp; L A T E S T &nbsp; N E W S &nbsp;&nbsp;&&nbsp;&nbsp;
+                Blog</h1>
+            <div class="md:flex text-end">
+                <div class="text-start md:w-1/2">
+                    <h2 class="text-[60px] text-[#0B1826] font-[600] leading-16 mb-2">Our Best Solutions<br>
+                        News & Blogs</h2>
+                </div>
+            </div>
+
+
+
+            <div class="container mx-auto p-4 py-14">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="flex flex-col bg-white overflow-hidden">
+                        <div class="relative">
+                            <img src="../assets/images/technician-maintaining-ac-unit.jpg"
+                                alt="Air Conditioning Maintenance"
+                                class="w-full h-56 rounded-[10px] relative object-cover">
+                            <span class="absolute bottom-0 left-8 p-2 px-6 text-white text-xs bg-[#0B1826]">LOREM</span>
+                        </div>
+                        <div class="p-8">
+                            <span class="text-[#878787] text-sm">BUSINESS / 23.06.2024</span>
+                            <h2 class="text-lg font-semibold mt-2">Lorem Ipsum Is Simply Dummy Text Of The Printing And
+                                Type..</h2>
+                            <a href="./second-page.html" class="text-xs mt-4 inline-block">
+                                <div
+                                    class="flex items-center justify-end text-[#0B1826] px-6 relative cursor-pointer group">
+                                    <span
+                                        class="w-[35px] h-[35px] mr-4 text-[#0B1826] border border-[#0B1826] rounded-full inline-block relative z-0">
+                                    </span>
+                                    <img src="../assets/black-lengthy-right-arrow.svg"
+                                        class="absolute -left-1 transition-transform w-12 duration-300 group-hover:translate-x-10 z-10"
+                                        alt="">
+                                    KNOW MORE
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="flex flex-col bg-white overflow-hidden">
+                        <div class="relative">
+                            <img src="../assets/images/technician-cleaning-air-conditioner-filter.jpg"
+                                alt="Air Conditioning Maintenance"
+                                class="w-full h-56 rounded-[10px] relative object-cover">
+                            <span class="absolute bottom-0 left-8 p-2 px-6 text-white text-xs bg-[#0B1826]">LOREM</span>
+                        </div>
+                        <div class="p-8">
+                            <span class="text-[#878787] text-sm">BUSINESS / 23.06.2024</span>
+                            <h2 class="text-lg font-semibold mt-2">Lorem Ipsum Is Simply Dummy Text Of The Printing And
+                                Type..</h2>
+                            <a href="#" class="text-xs text-red-600 mt-4 inline-block">
+                                <div
+                                    class="flex items-center justify-end text-[#0B1826] px-6 relative cursor-pointer group">
+                                    <span
+                                        class="w-[35px] h-[35px] mr-4 text-[#0B1826] border border-[#0B1826] rounded-full inline-block relative z-0">
+                                    </span>
+                                    <img src="../assets/black-lengthy-right-arrow.svg"
+                                        class="absolute -left-1 transition-transform w-12 duration-300 group-hover:translate-x-10 z-10"
+                                        alt="">
+
+
+                                    KNOW MORE
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="flex flex-col bg-white overflow-hidden">
+                        <div class="relative">
+                            <img src="../assets/images/hvac-technician-inspecting-outdoor-unit.jpg"
+                                alt="Air Conditioning Maintenance"
+                                class="w-full h-56 rounded-[10px] relative object-cover">
+                            <span class="absolute bottom-0 left-8 p-2 px-6 text-white text-xs bg-[#0B1826]">LOREM</span>
+                        </div>
+                        <div class="p-8">
+                            <span class="text-[#878787] text-sm">BUSINESS / 23.06.2024</span>
+                            <h2 class="text-lg font-semibold mt-2">Lorem Ipsum Is Simply Dummy Text Of The Printing And
+                                Type..</h2>
+                            <a href="#" class="text-xs text-red-600 mt-4 inline-block">
+                                <div
+                                    class="flex items-center justify-end text-[#0B1826] px-6 relative cursor-pointer group">
+                                    <span
+                                        class="w-[35px] h-[35px] mr-4 text-[#0B1826] border border-[#0B1826] rounded-full inline-block relative z-0">
+                                    </span>
+                                    <img src="../assets/black-lengthy-right-arrow.svg"
+                                        class="absolute -left-1 transition-transform w-12 duration-300 group-hover:translate-x-10 z-10"
+                                        alt="">
+
+
+                                    KNOW MORE
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Footer -->
-    <footer class="py-6 bg-gray-800 text-white text-center">
-        <div class="container mx-auto">
-            <p>&copy; 2025 Cool Technologies. All rights reserved.</p>
+    <footer class="py-16 bg-[#15212D] text-white">
+        <div class="mx-auto px-14">
+            <div class="md:flex text-end mb-24">
+                <div class="text-start w-full">
+                    <h2 class="text-6xl text-[#E4E4E4] font-[500] leading-16 mb-10">Ready to Experience Superior<br>
+                        Cooling?</h2>
+                    <div class="flex items-center justify-start gap-6">
+                        <button
+                            class="text-[#E4E4E4] border border-[#E4E4E4] py-3.5 px-6 rounded-full flex items-center justify-center gap-2">
+                            LET'S TALK
+                            <img src="../assets/white-up-right-arrow.svg" width="20px" alt="" />
+                        </button>
+                        <h4 class="text-2xl underline">info@cooltech.com</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="md:flex text-end">
+                <div class="flex flex-col gap-4 text-start w-1/2">
+                    <img src="../assets/images/logo-cool-technologies.png" class="w-[140px]" alt="">
+                    <p class="text-lg text-[#E4E4E4] w-3/4 mb-14">Lorem Ipsum is simply dummy text of
+                        the printing and typesetting industry. Lorem Ipsum has been the industry</p>
+                    <div class="flex text-xl text-[#E4E4E4] gap-8">
+                        <p>INSTAGRAM</p>
+                        <p>FACEBOOK</p>
+                        <p>TWITTER</p>
+                        <p>PINTEREST</p>
+                    </div>
+                </div>
+                <div class="w-1/2 px-4">
+                    <div class="flex justify-between">
+                        <div class="text-start">
+                            <h3 class="mb-5 text-xl text-[#E4E4E4]">Quick Links</h3>
+                            <ul>
+                                <li class="mb-4"><a href="" class="text-lg !text-[#C9C9C9] hover:text-gray-300">Home</a>
+                                </li>
+                                <li class="mb-4"><a href="" class="text-lg !text-[#C9C9C9] hover:text-gray-300">About
+                                        Us</a></li>
+                                <li class="mb-4"><a href=""
+                                        class="text-lg !text-[#C9C9C9] hover:text-gray-300">Services</a></li>
+                            </ul>
+                        </div>
+                        <div class="text-start">
+                            <h3 class="mb-5 text-xl text-[#E4E4E4]">Explore</h3>
+                            <ul>
+                                <li class="mb-4"><a href=""
+                                        class="text-lg !text-[#C9C9C9] hover:text-gray-300">Products</a></li>
+                                <li class="mb-4"><a href=""
+                                        class="text-lg !text-[#C9C9C9] hover:text-gray-300">Gallery</a></li>
+                                <li class="mb-4"><a href=""
+                                        class="text-lg !text-[#C9C9C9] hover:text-gray-300">Blogs</a></li>
+                            </ul>
+                        </div>
+                        <div class="text-start">
+                            <h3 class="mb-5 text-xl text-[#E4E4E4]">Info</h3>
+                            <ul>
+                                <li class="mb-4"><a href="" class="text-lg !text-[#C9C9C9] hover:text-gray-300">Contact
+                                        Us</a></li>
+                                <li class="mb-4"><a href="" class="text-lg !text-[#C9C9C9] hover:text-gray-300">Privacy
+                                        Policy</a></li>
+                                <li class="mb-4"><a href="" class="text-lg !text-[#C9C9C9] hover:text-gray-300">Terms of
+                                        Service</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="text-[#E4E4E4] text-end mt-8">
+                        <p>Copyright © 2024 Cooltech. All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
         </div>
     </footer>
-    </bod6>
 
-    </htm6>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
