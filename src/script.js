@@ -18,3 +18,26 @@ window.addEventListener("scroll", () => {
     }
     lastScroll = currentScroll;
 });
+
+
+//Auto sliding
+const carousel = document.querySelector("#carousel");
+const totalImages = document.querySelectorAll("#carousel img").length;
+let currentIndex = 0;
+
+function slide() {
+    if (currentIndex >= totalImages / 2) {
+        carousel.style.transition = "none";
+        carousel.style.transform = `translateX(0)`;
+        currentIndex = 0;
+
+        setTimeout(() => {
+            carousel.style.transition = "transform 2s ease-in-out";
+        }, 50);
+    }
+
+    carousel.style.transform = `translateX(-${(currentIndex + 1) * 392}px)`;
+    currentIndex++;
+}
+
+setInterval(slide, 2000);

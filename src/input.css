@@ -27,3 +27,26 @@ html {
 	}
 }
 
+#carousel-container {
+  width: 100%; /* You can set a specific width if necessary */
+  overflow: hidden;
+}
+
+#carousel {
+  display: flex;
+  transition: transform 2s ease-in-out;
+}
+
+#carousel img {
+  flex-shrink: 0;
+}
+
+/* Sticky left-side styling */
+.sticky-left-side {
+  position: sticky;
+  top: 0;
+  height: 100vh; 
+  z-index: 10;
+}
+
+
