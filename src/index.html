@@ -24,26 +24,30 @@
             </span>
 
             <!-- Mobile Menu Button (Hidden on large screens) -->
-            <button @click="open = !open" class="lg:hidden text-black text-3xl">
+            <button @click="open = !open" class="cursor-pointer lg:hidden text-black text-3xl">
                 ☰
             </button>
 
             <!-- Navigation Links (Hidden on mobile, visible on larger screens) -->
             <ul class="hidden lg:flex items-center space-x-6">
-                <li><a href="#" class="text-lg !text-black font-[500]">HOME</a></li>
-                <li><a href="#" class="text-lg !text-black font-[500]">ABOUT</a></li>
                 <li>
-                    <a href="#" class="text-lg !text-black font-[500]">SERVICE</a>
+                    <a href="#" class="text-lg !text-black font-[500]">HOME</a>
                 </li>
                 <li>
-                    <a href="#" class="text-lg !text-black font-[500]">PRODUCTS</a>
+                    <a href="#about" class="text-lg !text-black font-[500]">ABOUT</a>
                 </li>
-                <li><a href="#" class="text-lg !text-black font-[500]">BLOG</a></li>
                 <li>
-                    <a href="#" class="text-lg !text-black font-[500]">CONTACT</a>
+                    <a href="#service" class="text-lg !text-black font-[500]">SERVICE</a>
+                </li>
+                <li>
+                    <a href="#products" class="text-lg !text-black font-[500]">PRODUCTS</a>
+                </li>
+                <li><a href="#blog" class="text-lg !text-black font-[500]">BLOG</a></li>
+                <li>
+                    <a href="#contact" class="text-lg !text-black font-[500]">CONTACT</a>
                 </li>
                 <button
-                    class="flex items-center gap-2 bg-white text-black font-[500] border border-black px-4 py-3 rounded-full">
+                    class="cursor-pointer flex items-center gap-2 bg-white text-black font-[500] border border-black px-4 py-3 rounded-full">
                     LET'S TALK
                     <img src="../assets/black-up-right-arrow.svg" width="20px" alt="" />
                 </button>
@@ -60,7 +64,7 @@
                 <li><a href="#" class="text-lg font-[500]">PRODUCTS</a></li>
                 <li><a href="#" class="text-lg font-[500]">BLOG</a></li>
                 <li><a href="#" class="text-lg font-[500]">CONTACT</a></li>
-                <button class="bg-white text-black font-[500] border border-black px-6 py-2 rounded-full">
+                <button class="cursor-pointer bg-white text-black font-[500] border border-black px-6 py-2 rounded-full">
                     LET'S TALK
                 </button>
             </ul>
@@ -82,12 +86,12 @@
                 <!-- Buttons -->
                 <div class="flex flex-col md:flex-row gap-4">
                     <button
-                        class="bg-[#479ACE] hover:bg-blue-700 text-white py-3 px-6 rounded-full flex items-center justify-center gap-2">
+                        class="cursor-pointer bg-[#479ACE] hover:bg-blue-700 text-white py-3 px-6 rounded-full flex items-center justify-center gap-2">
                         LETS TALK
                         <img src="../assets/white-up-right-arrow.svg" width="20px" alt="" />
                     </button>
                     <button
-                        class="text-[#221F1D] border border-[#221F1D] py-3 px-6 rounded-full flex items-center justify-center gap-2">
+                        class="cursor-pointer text-[#221F1D] border border-[#221F1D] py-3 px-6 rounded-full flex items-center justify-center gap-2">
                         EXPLORE OUR PRODUCTS
                         <img src="../assets/black-up-right-arrow.svg" width="20px" alt="" />
                     </button>
@@ -103,7 +107,7 @@
     </section>
 
     <!-- About Section -->
-    <section class="py-12 relative bg-[#F9F9F9]">
+    <section id="about" class="py-12 relative bg-[#F9F9F9]">
         <div class="mx-auto mb-16 px-14">
             <h1 class="text-xl text-[#397DA8] mb-3">ABOUT US</h1>
 
@@ -134,8 +138,8 @@
             </div>
         </div>
         <div class="flex overflow-hidden mx-auto text-center gap-8">
-            <img src="../assets/images/hvac-unit-outdoor.jpg"
-                class="w-[392px] h-[500px] object-cover rounded-[10px]" alt="">
+            <img src="../assets/images/hvac-unit-outdoor.jpg" class="w-[392px] h-[500px] object-cover rounded-[10px]"
+                alt="">
             <img src="../assets/images/person-cleaning-air-conditioner-filter.jpg"
                 class="w-[392px] h-[460px] object-cover rounded-[10px]" alt="">
             <img src="../assets/images/technician-maintaining-ac-unit.jpg"
@@ -146,7 +150,7 @@
     </section>
 
     <!-- Services Section -->
-    <section class="py-12 bg-[#F9F9F9]">
+    <section id="service" class="py-12 bg-[#F9F9F9]">
         <div class="mx-auto mb-16 px-14">
             <h1 class="text-xl text-[#397DA8] mb-3">OUR SERVICES</h1>
 
@@ -155,12 +159,12 @@
                     <h2 class="text-[60px] font-[600] leading-16 mb-6">Professional Services Tailored for You</h2>
                     <div class="flex gap-4">
                         <button
-                            class="text-[#221F1D] border border-[#221F1D] py-3 px-6 rounded-full flex items-center justify-center gap-2">
+                            class="cursor-pointer text-[#221F1D] border border-[#221F1D] py-3 px-6 rounded-full flex items-center justify-center gap-2">
                             Installation of Air Conditioning
                             <img src="../assets/black-up-right-arrow.svg" width="20px" alt="" />
                         </button>
                         <button
-                            class="text-[#221F1D] border border-[#221F1D] py-3 px-6 rounded-full flex items-center justify-center gap-2">
+                            class="cursor-pointer text-[#221F1D] border border-[#221F1D] py-3 px-6 rounded-full flex items-center justify-center gap-2">
                             Maintainance
                             <img src="../assets/black-up-right-arrow.svg" width="20px" alt="" />
                         </button>
@@ -300,7 +304,7 @@
         </div>
     </section>
 
-    <section class="py-12 bg-[#F9F9F9]">
+    <section id="products" class="py-12 bg-[#F9F9F9]">
         <div class="mx-auto mb-16 px-14">
             <h1 class="text-xl text-[#397DA8] mb-3">OUR PRODUCTS</h1>
 
@@ -546,8 +550,8 @@
         </div>
     </section>
 
-
-    <section class="py-12 bg-[#F3F3F3]">
+    <!--Form section for Connect Us-->
+    <section id="contact" class="py-12 bg-[#F3F3F3]">
         <div class="flex h-[700px] w-full bg-cover bg-top relative"
             style="background-image: url('../assets/images/person-using-remote-control-for-ac.jpg');">
             <div class="absolute inset-0 bg-[#0B1826A8] opacity-100"></div>
@@ -561,7 +565,7 @@
                             amet volutpat. Sed ullamcorper tellus rutrum tellus
                             pellentesque eu. Sagittis purus sit</p>
                         <button
-                            class="flex items-center justify-center text-white text-[12px] mt-8 px-8 py-2.5 rounded-full bg-[#15212D] border border-[#8787871a] w-auto">
+                            class="cursor-pointer flex items-center justify-center text-white text-[12px] mt-8 px-8 py-2.5 rounded-full bg-[#15212D] border border-[#8787871a] w-auto">
                             VIEW MORE
                             <img src="../assets/white-lengthy-right-arrow.svg" class="w-10 ml-2" alt="">
                         </button>
@@ -598,17 +602,17 @@
                             <div class="flex items-center justify-between text-[19px] mb-4">
                                 <label class="flex items-center space-x-3">
                                     <input type="checkbox" name="option3" value="yes"
-                                        class="w-6 h-6 border-8 border-gray-500 rounded-full ">
+                                        class="cursor-pointer w-6 h-6 border-8 border-gray-500 rounded-full ">
                                     <span>Purchase</span>
                                 </label>
                                 <label class="flex items-center space-x-3">
                                     <input type="checkbox" name="option3" value="yes"
-                                        class="w-6 h-6 border-8 border-gray-500 rounded-full ">
+                                        class="cursor-pointer w-6 h-6 border-8 border-gray-500 rounded-full ">
                                     <span>Installation</span>
                                 </label>
                                 <label class="flex items-center space-x-3">
                                     <input type="checkbox" name="option3" value="yes"
-                                        class="w-6 h-6 border-8 border-gray-500 rounded-full ">
+                                        class="cursor-pointer w-6 h-6 border-8 border-gray-500 rounded-full ">
                                     <span>Services</span>
                                 </label>
                             </div>
@@ -620,7 +624,7 @@
                             </div>
                             <div class="flex">
                                 <button type="submit"
-                                    class=" bg-white hover:bg-[#0B1826] text-[#0B1826] hover:text-white border border-[#0B1826] px-8 py-4 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500">Send
+                                    class=" cursor-pointer bg-white hover:bg-[#0B1826] text-[#0B1826] hover:text-white border border-[#0B1826] px-8 py-4 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500">Send
                                     Message</button>
                             </div>
                         </form>
@@ -630,7 +634,7 @@
         </div>
     </section>
 
-    <section class="py-12 bg-[#F3F3F3]">
+    <section id="blog" class="py-12 bg-[#F3F3F3]">
         <div class="mx-auto px-14">
             <h1 class="text-xl text-[#397DA8] mb-4">O U R &nbsp; L A T E S T &nbsp; N E W S &nbsp;&nbsp;&&nbsp;&nbsp;
                 Blog</h1>
@@ -642,7 +646,7 @@
             </div>
 
 
-
+            <!--News-->
             <div class="container mx-auto p-4 py-14">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Card 1 -->
@@ -659,9 +663,9 @@
                                 Type..</h2>
                             <a href="./second-page.html" class="text-xs mt-4 inline-block">
                                 <div
-                                    class="flex items-center justify-end text-[#0B1826] px-6 relative cursor-pointer group">
+                                    class="flex items-center justify-end text-[#0B1826] hover:text-blue-500 px-6 relative cursor-pointer group">
                                     <span
-                                        class="w-[35px] h-[35px] mr-4 text-[#0B1826] border border-[#0B1826] rounded-full inline-block relative z-0">
+                                        class="w-[35px] h-[35px] mr-6 text-[#0B1826] border border-[#d7d7d7] rounded-full inline-block relative z-0">
                                     </span>
                                     <img src="../assets/black-lengthy-right-arrow.svg"
                                         class="absolute -left-1 transition-transform w-12 duration-300 group-hover:translate-x-10 z-10"
@@ -687,7 +691,7 @@
                                 <div
                                     class="flex items-center justify-end text-[#0B1826] px-6 relative cursor-pointer group">
                                     <span
-                                        class="w-[35px] h-[35px] mr-4 text-[#0B1826] border border-[#0B1826] rounded-full inline-block relative z-0">
+                                        class="w-[35px] h-[35px] mr-6 text-[#0B1826] border border-[#d7d7d7] rounded-full inline-block relative z-0">
                                     </span>
                                     <img src="../assets/black-lengthy-right-arrow.svg"
                                         class="absolute -left-1 transition-transform w-12 duration-300 group-hover:translate-x-10 z-10"
@@ -715,7 +719,7 @@
                                 <div
                                     class="flex items-center justify-end text-[#0B1826] px-6 relative cursor-pointer group">
                                     <span
-                                        class="w-[35px] h-[35px] mr-4 text-[#0B1826] border border-[#0B1826] rounded-full inline-block relative z-0">
+                                        class="w-[35px] h-[35px] mr-6 text-[#0B1826] border border-[#d7d7d7] rounded-full inline-block relative z-0">
                                     </span>
                                     <img src="../assets/black-lengthy-right-arrow.svg"
                                         class="absolute -left-1 transition-transform w-12 duration-300 group-hover:translate-x-10 z-10"
@@ -742,7 +746,7 @@
                         Cooling?</h2>
                     <div class="flex items-center justify-start gap-6">
                         <button
-                            class="text-[#E4E4E4] border border-[#E4E4E4] py-3.5 px-6 rounded-full flex items-center justify-center gap-2">
+                            class="cursor-pointer text-[#E4E4E4] border border-[#E4E4E4] py-3.5 px-6 rounded-full flex items-center justify-center gap-2">
                             LET'S TALK
                             <img src="../assets/white-up-right-arrow.svg" width="20px" alt="" />
                         </button>

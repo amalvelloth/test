@@ -1,8 +1,9 @@
+//Navbar appearance and hiding while scroll up & down
 const body = document.body;
 let lastScroll = 0;
 
 window.addEventListener("scroll", () => {
-    const currentScroll = window.scrollY; // Use scrollY instead of pageYOffset
+    const currentScroll = window.scrollY; 
     if (currentScroll <= 0) {
         body.classList.remove("scroll-up");
         return;
